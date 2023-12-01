@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drugstore CRUD</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <h2>DRUGSTORE NICOTICH </h2>
+    <a href="login.html">Cerrar Sesion</a>  
+    <br>
+    <form id="drugstoreForm">
+        <label for="barcode">Código de Barras:</label>
+        <select id="barcode" onchange="showProductName()">
+            <option value="">Seleccione una opción</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="other">Otro (Ingrese manualmente)</option>
+        </select>
+
+        <label for="productName">Nombre del Producto:</label>
+        <input type="text" id="productName" required>
+
+        <label for="price">Precio:</label>
+        <input type="number" id="price" required>
+
+        <label for="price">Cantidad:</label>
+        <input type="number" id="Cantidad" oninput="calcularTotal()" required>
+
+        <label for="price">Total:</label>
+        <input type="number" id="Total" readonly>
+
+        <label for="productType">Tipo:</label>
+        <select id="productType" required>
+            <option value="bebida">Bebida</option>
+            <option value="verdura">Verdura</option>
+            <option value="alimento">Alimento</option>
+            <option value="lacteos">Lácteos</option>
+        </select>
+        <input type="hidden" id="productId">
+
+        <button type="button" class="agregar" onclick="addOrUpdateProduct()">Agregar</button>
+        <br>
+        <button id="finalizarButton" type="button" class="finalizar" onclick="finalizarCompra()">Finalizar Compra</button>
+    </form>
+    <br>
+    <table id="productTable">
+        <tr>
+            <th>Nombre del Producto</th>
+            <th>Precio</th>
+            <th>Cantidad</th> 
+            <th>Total</th>
+            <th>Código de Barras</th>
+            <th>Tipo</th>
+            <th>Acciones</th>
+        </tr>
+    </table>
+    <br>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/functions.js"></script>
+</body>
+
+</html>

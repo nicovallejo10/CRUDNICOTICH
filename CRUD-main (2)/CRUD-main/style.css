@@ -1,0 +1,83 @@
+body {
+    background-color: #1b1b1b;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    
+}
+
+h2 {
+   
+
+        text-align: center; /* Centrar el texto */
+        font-family: 'Arial', sans-serif; /* Cambiar el tipo de letra */
+        color: #ffffff; /* Cambiar el color del texto (puedes usar un código de color o un nombre) */
+        text-shadow: 2px 2px 4px rgb(255, 0, 0); /* Agregar una sombra (horizontal, vertical, desenfoque, color) */
+    
+}
+*{
+    color: green;
+}
+a {
+    color: red;
+    text-decoration: none;
+    margin-bottom: 20px;
+    display: block;
+}
+
+form {
+    
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex; /* Utilizamos flexbox */
+    flex-direction: column; /* Cambiamos la dirección a columna */
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input,
+select { /* Aplicamos los estilos a los input y select */
+    width: calc(100% - 16px); /* Se resta 16px para compensar el padding y margin */
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: red;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 15%; /* Ajustamos el ancho para ocupar toda la línea */
+}
+
+.agregar {
+    width: 7%;
+    background-color: grey; /* Cambiamos el color de fondo para el botón con la clase 'agregar' */
+}
+.finalizar {
+    width: 7%;
+    background-color: green; /* Cambiamos el color de fondo para el botón con la clase 'agregar' */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: red;
+    color: #fff;
+}
